@@ -8,7 +8,7 @@ Calculate mortar firing chart with Casio scientific calculator
 
 ## Requirements
 
-1. Casio scientific calculator including Program Mode (PROG), CASIO BASIC 
+1. Casio scientific calculator including Program Mode (PROG) with CASIO BASIC 
    - eg. FX-5800P
   
 ## Contents
