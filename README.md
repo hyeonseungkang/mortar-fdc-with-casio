@@ -24,9 +24,9 @@ Calculate mortar firing chart with Casio scientific calculator
 
    #### 2.1. Parenthetical functions in Casio scientific calculator
 
-   - ```Imp()```, ```Rep()```: Extract real part / imaginary part from complex number.
+   - ```Imp(a+bi)```, ```Rep(a+bi)```: Extract real part / imaginary part from complex number.
    - ```Pol(x, y)```, ```Rec(r, θ)```: Conversion between Cartesian coordinate-Polar coordinate.
-   - ```Locate()```: Display specific numeric or string in specific screen location when ```PROG``` mode.
+   - ```Locate(x, y, n)```: Display specific numeric or string in specific screen location when ```PROG``` mode.
 
    #### 2.2. Operations in Casio scientific calculator
 
@@ -83,11 +83,13 @@ Calculate mortar firing chart with Casio scientific calculator
 
 ## References
 
-- OBSERVED FIRES
-   - [ATP 3-09.30 — OBSERVED FIRES](./references-archive/ARN5011_ATP%203-09x30%20FINAL%20WEB.pdf)
-- CALL FOR FIRE
-   - [GTA 17-02-015](./references-archive/call_for_fire.pdf)
-- Mortar FDC Field Manual
-   - [TC 3-22.91 — MORTAR FIRE DIRECTION PROCEDURES](./references-archive/ARN3488_TC%203-22x91%20FINAL%20WEB%201.pdf)
-- Firing Record Form
-   - [DA FORM 2399 — COMPUTER`S RECORD (LRA)](./references-archive/ARN3823_DA%20FORM%202399%20FINAL.pdf)
+- TRADOC. (2013). ATP 3-09.30 Techniques for Observed Fire. US Army.
+   - [PDF](./references-archive/ARN5011_ATP%203-09x30%20FINAL%20WEB.pdf)
+- TRADOC. (2009). GTA 17-02-015 Call For Fire. US Army.
+   - [PDF](./references-archive/call_for_fire.pdf)
+- TRADOC. (2017). TC 3-22.91 Mortar Fire Direction Procedures. US Army.
+   - [PDF](./references-archive/ARN3488_TC%203-22x91%20FINAL%20WEB%201.pdf)
+- TRADOC. (2017). DA Form 2399 Computer’s Record (LRA). US Army.
+   - [PDF](./references-archive/ARN3823_DA%20FORM%202399%20FINAL.pdf)
+- 박격포 공학용 계산 식. Tistory. (2013, April 4). https://lunaticju.tistory.com/32
+   - [Website](https://lunaticju.tistory.com/32)
