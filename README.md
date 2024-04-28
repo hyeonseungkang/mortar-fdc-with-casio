@@ -24,9 +24,11 @@ Calculate mortar firing chart with Casio scientific calculator
 
 ## References
 
+- OBSERVED FIRES
+   - [ATP 3-09.30 — OBSERVED FIRES](./ARN5011_ATP%203-09x30%20FINAL%20WEB.pdf)
 - CALL FOR FIRE
-   - [GTA 17-02-015](https://raizhemanuel.tripod.com/call_for_fire.pdf)
+   - [GTA 17-02-015](./call_for_fire.pdf)
 - Mortar FDC Field Manual
-   - [TC 3-22.91 — MORTAR FIRE DIRECTION PROCEDURES](https://armypubs.army.mil/epubs/DR_pubs/DR_a/pdf/web/ARN3488_TC%203-22x91%20FINAL%20WEB%201.pdf)
+   - [TC 3-22.91 — MORTAR FIRE DIRECTION PROCEDURES](./ARN3488_TC%203-22x91%20FINAL%20WEB%201.pdf)
 - Firing Record Form
-   - [DA FORM 2399 — COMPUTER`S RECORD (LRA)](https://armypubs.army.mil/pub/eforms/DR_a/pdf/ARN3823_DA%20FORM%202399%20FINAL.pdf)
+   - [DA FORM 2399 — COMPUTER`S RECORD (LRA)](./ARN3823_DA%20FORM%202399%20FINAL.pdf)
