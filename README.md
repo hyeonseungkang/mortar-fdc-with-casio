@@ -4,6 +4,8 @@
 
 Calculate mortar firing chart with Casio scientific calculator
 
+[README.ko-kr.md](./README.ko-kr.md)
+
 ## Requirements
 
 1. Casio scientific calculator including Program Mode (PROG), CASIO BASIC
