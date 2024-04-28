@@ -18,17 +18,17 @@ Calculate mortar firing chart with Casio scientific calculator
    #### 1.1. Purpose of development
 
    
-   The method of calculating the horizontal distance and declination angle by manually drawing it on a calculation board not only does not allow you to know the values precisely, but there is a high possibility that the FDC will make a mistake. To solve this problem, I introduced a scientific calculator to reduce calculation errors and shorten calculation time.
+   The method of calculating the horizontal distance and declination angle by manually drawing it on a plotting board not only does not allow you to know the values precisely, but there is a high possibility that the FDC will make a mistake. To solve this problem, I introduced a scientific calculator to reduce calculation errors and shorten calculation time.
 
 ### 2. Development Process
 
-   #### 2.1. Functions in Casio scientific calculator
+   #### 2.1. Parenthetical functions in Casio scientific calculator
 
    - ```Imp()```, ```Rep()```: Extract real part / imaginary part from complex number.
-   - ```Pol()```, ```Rec()```: Conversion between Cartesian coordinate-Polar coordinate.
+   - ```Pol(x, y)```, ```Rec(r, θ)```: Conversion between Cartesian coordinate-Polar coordinate.
    - ```Locate()```: Display specific numeric or string in specific screen location when ```PROG``` mode.
 
-   #### 2.2. Functionalites in Casio scientific calculator
+   #### 2.2. Operations in Casio scientific calculator
 
    - [FILE] Key: Run program in ```COMP``` mode.
    - [MODE] Key-[5] Key: Enter ```PROG``` mode. In ```PROG``` mode, programs can saved or edited to calculator.
