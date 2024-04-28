@@ -67,7 +67,7 @@ Calculate mortar firing chart with Casio scientific calculator
          
    - Dependency PROGs
    
-      - Recent 1 calculation (최근1개계산)
+      - Read recent 1 calculation (최근1개계산 확인)
       
          [MOT.RECENT.basic](./MOT.RECENT.basic)
          
