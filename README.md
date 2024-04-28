@@ -4,7 +4,7 @@
 
 Calculate mortar firing chart with Casio scientific calculator
 
-(REAMDE.ko-KR.md)[./README.ko-KR.md]
+[REAMDE.ko-KR.md](./README.ko-KR.md)
 
 ## Requirements
 
