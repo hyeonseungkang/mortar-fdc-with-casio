@@ -23,9 +23,9 @@
 
    #### 2.1. 카시오 공학용 계산기 내장함수
 
-   - ```Imp()```, ```Rep()```: 복소수의 실수부, 허수부를 추출한다.
+   - ```Imp(a+bi)```, ```Rep(a+bi)```: 복소수의 실수부, 허수부를 추출한다.
    - ```Pol(x, y)```, ```Rec(r, θ)```: 데카르트좌표계-극좌표계 간 변환을 수행한다.
-   - ```Locate()```: ```PROG``` 모드에서 지정한 위치에 특정 문자 및 숫자를 띄운다.
+   - ```Locate(x, y, n)```: ```PROG``` 모드에서 지정한 위치에 특정 문자 및 숫자를 띄운다.
 
    #### 2.2. 카시오 공학용 계산기 내장기능
 
@@ -82,11 +82,13 @@
 
 ## 참고문헌
 
-- OBSERVED FIRES
-   - [ATP 3-09.30 — OBSERVED FIRES](./references-archive/ARN5011_ATP%203-09x30%20FINAL%20WEB.pdf)
-- CALL FOR FIRE
-   - [GTA 17-02-015](./references-archive/call_for_fire.pdf)
-- Mortar FDC Field Manual
-   - [TC 3-22.91 — MORTAR FIRE DIRECTION PROCEDURES](./references-archive/ARN3488_TC%203-22x91%20FINAL%20WEB%201.pdf)
-- Firing Record Form
-   - [DA FORM 2399 — COMPUTER`S RECORD (LRA)](./references-archive/ARN3823_DA%20FORM%202399%20FINAL.pdf)
+- TRADOC. (2013). ATP 3-09.30 Techniques for Observed Fire. US Army.
+   - [PDF](./references-archive/ARN5011_ATP%203-09x30%20FINAL%20WEB.pdf)
+- TRADOC. (2009). GTA 17-02-015 Call For Fire. US Army.
+   - [PDF](./references-archive/call_for_fire.pdf)
+- TRADOC. (2017). TC 3-22.91 Mortar Fire Direction Procedures. US Army.
+   - [PDF](./references-archive/ARN3488_TC%203-22x91%20FINAL%20WEB%201.pdf)
+- TRADOC. (2017). DA Form 2399 Computer’s Record (LRA). US Army.
+   - [PDF](./references-archive/ARN3823_DA%20FORM%202399%20FINAL.pdf)
+- 박격포 공학용 계산 식. Tistory. (2013, April 4). https://lunaticju.tistory.com/32
+   - [Website](https://lunaticju.tistory.com/32)
