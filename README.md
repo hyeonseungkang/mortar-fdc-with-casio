@@ -25,7 +25,6 @@ Calculate mortar firing chart with Casio scientific calculator
 ## References
 
 - Mortar FDC Field Manual
-   - [FM 3-22.91 Jul 2008 PT 1](https://www.marines.mil/Portals/1/Publications/FM%203-22.91%20Jul%202008%20PT%201.pdf)
-   - [FM 3-22.91 Jul 2008 PT 2](https://www.marines.mil/Portals/1/Publications/FM%203-22.91%20Jul%202008%20PT%202.pdf)
--  COMPUTER'S RECORD
-   - [DA Form 2399-R](https://armypubs.army.mil/pub/eforms/DR_a/pdf/ARN3823_DA%20FORM%202399%20FINAL.pdf)
+   - [TC 3-22.91 — MORTAR FIRE DIRECTION PROCEDURES](https://armypubs.army.mil/epubs/DR_pubs/DR_a/pdf/web/ARN3488_TC%203-22x91%20FINAL%20WEB%201.pdf)
+- Firing Record Form
+   - [DA FORM 2399 — COMPUTER`S RECORD (LRA)](https://armypubs.army.mil/pub/eforms/DR_a/pdf/ARN3823_DA%20FORM%202399%20FINAL.pdf)
