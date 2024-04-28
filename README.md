@@ -12,15 +12,38 @@ Calculate mortar firing chart with Casio scientific calculator
 ## TOC
 
 1. Introduction
+
+
+
 2. Calculation PROGs
-    - [Grid (방안좌표법)](./MOT.COORD.basic)
-    - [Polar Plot (극표정법)](./MOT.POLAR.basic)
-    - [Shift from a Known Point (기지점전이법)](./MOT.RP-TRS.basic)
-    - [Firing Correction (수정)](./MOT.FIX.basic)
-4. Dependency PROGs
-   - [Recent 1 calculation (최근1개계산)](./MOT.RECENT.basic)
-   - [Clean Setup (설정초기화)](./ZCLNSETUP)
-   - [Variable to 0-6400Mils (변수값을 0-6400밀 이내로)](./ZINANGL.basic)
+    - Grid (방안좌표법)
+      
+      [MOT.COORD.basic](./MOT.COORD.basic)
+      
+    - Polar Plot (극표정법)
+
+      [MOT.POLAR.basic](./MOT.POLAR.basic)
+      
+    - Shift from a Known Point (기지점전이법)
+      
+      [MOT.RP-TRS.basic](./MOT.RP-TRS.basic)
+      
+    - Firing Correction (수정)
+
+      [MOT.FIX.basic](./MOT.FIX.basic)
+      
+3. Dependency PROGs
+   - Recent 1 calculation (최근1개계산)
+     
+     [MOT.RECENT.basic](./MOT.RECENT.basic)
+     
+   - Clean Setup (설정초기화)
+   
+     [ZCLNSETUP.basic](./ZCLNSETUP.basic)
+     
+   - Variable to 0-6400Mils (변수값을 0-6400밀 이내로)
+     
+     [ZINANGL.basic](./ZINANGL.basic)
 
 ## References
 
