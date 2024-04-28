@@ -13,9 +13,10 @@ Calculate mortar firing chart with Casio scientific calculator
 
 1. Introduction
 
-
+>
 
 2. Calculation PROGs
+
     - Grid (방안좌표법)
       
       [MOT.COORD.basic](./MOT.COORD.basic)
@@ -33,6 +34,7 @@ Calculate mortar firing chart with Casio scientific calculator
       [MOT.FIX.basic](./MOT.FIX.basic)
       
 3. Dependency PROGs
+
    - Recent 1 calculation (최근1개계산)
      
      [MOT.RECENT.basic](./MOT.RECENT.basic)
