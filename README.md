@@ -43,7 +43,7 @@ Calculate mortar firing chart with Casio scientific calculator
    
      [ZCLNSETUP.basic](./ZCLNSETUP.basic)
      
-   - Variable to 0-6400Mils (변수값을 0-6400밀 이내로)
+   - Variable value to 0-6400Mils (변수값을 0-6400밀 이내로)
      
      [ZINANGL.basic](./ZINANGL.basic)
 
