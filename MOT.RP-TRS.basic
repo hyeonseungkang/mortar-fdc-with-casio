@@ -1,0 +1,54 @@
+# 기지점전이법
+"MOT.RP-TRS"
+
+# (확인점 X) - (포진지 X)
+"XRP-XM"? -> A
+# (확인점 Y) - (포진지 Y)
+"YRP-YM"? -> B
+A+Bi -> A
+
+# (확인점 고도) - (포진지 고도) - (표고차)
+"HRP-HM-∠H"? -> B
+# 보조사거리
+B/2 -> B
+
+"HORIZ VAR"? -> C
+C/10 -> C
+
+"VERT VAR"? -> D
+D/10 -> D
+
+# 관목방위각
+"OTAZ"? -> E
+E/160*9 -> E
+
+# M17 평판 시뮬레이션
+Pol(Rep(A), Imp(A))
+Rec(I, J+E)
+Pol(I+C, J+D)
+Rec(I, J-E)
+Pol(I, J)
+
+# 설정 초기화
+Cls
+Prog "ZCLNSETUP"
+
+# 수평거리
+Locate 1, 1, "MTRN"
+Locate 7, 1, I*10
+
+# 사거리
+Locate 1, 2, "RN"
+Locate 7, 2, I*10+B
+
+# 사격방위각
+Locate 1, 3, "MTAZ"
+(90-J)*160/9 -> P
+Prog "ZINANGL"
+Locate 7, 3, R
+
+# 후퇴사격방위각
+P+3200 -> P
+Prog "ZINANGL"
+Locate 1, 4, "MTAZ"
+Locate 7, 4, R
