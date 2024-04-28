@@ -17,9 +17,7 @@ C+Di -> C
 (B-D)/2 -> B
 
 # 계산판 시뮬레이션
-Pol(
-  Rep(A)-Rep(C), Imp(A)-Imp(C)
-)
+Pol(Rep(A)-Rep(C), Imp(A)-Imp(C))
 
 # 설정 초기화
 Prog "ZCLNSETUP"
