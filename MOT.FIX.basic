@@ -23,10 +23,8 @@ A+Bi -> A
 "OTAZ"? -> E
 E/160*9 -> E
 
-# M17 평판 시뮬레이션
-Rec(
-  Rep(A), 90-Imp(A)+E
-)
+# 계산판 시뮬레이션
+Rec(Rep(A), 90-Imp(A)+E)
 Pol(I+C, J+D)
 Rec(I, J-E+Imp(A))
 
