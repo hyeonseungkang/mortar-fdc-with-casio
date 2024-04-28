@@ -1,0 +1,11 @@
+P -> R
+
+# P가 음수인 경우
+If P < 0
+Then P+6400 -> R
+IfEnd
+
+# P가 6400밀 초과인 경우
+If P > 6400
+Then P-6400 -> R
+IfEnd
