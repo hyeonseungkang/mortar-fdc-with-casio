@@ -2,7 +2,7 @@
 
 <img src="https://img.shields.io/badge/casio_basic-blue?style=for-the-badge&logo=visualbasic&logoColor=ffffff" />
 
-카시오 공학용 계산기로 화력유도 계산하기
+카시오 공학용 계산기로 화력지원 제원 계산하기
 
 [REAMDE.md](./README.md)
 
