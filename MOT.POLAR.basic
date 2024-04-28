@@ -21,10 +21,8 @@ D/10 -> D
 "OTAZ"? -> E
 E/160*9 -> E
 
-# M17 평판 시뮬레이션
-Pol(
-  Rep(A), Imp(A)
-)
+# 계산판 시뮬레이션
+Pol(Rep(A), Imp(A))
 Rec(I, J+E)
 Pol(I, J+D)
 
