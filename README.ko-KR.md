@@ -32,51 +32,51 @@
 
    #### 2.3. 계산판을 계산기로 이식
 
-   > 계산판으로 계산하는 과정을 계산기로 재현하였다.
-   >
-   > 예컨대 ```방안좌표법을 구하기 위해 종·횡좌표를 계산판에 표시하여 수직선에 맞춰 수평거리와 사격방위각을 구하는 작업```은 ```종·횡 데카르트좌표를 극좌표로 변환하여 구해진 r과 θ를 통해 수평거리와 사격방위각 밀값을 도출```하는 방식으로 구현하였다.
-   >
-   > 밀 단위를 도 단위로 변환하기 위해 ```(n Mils)/160*9```을, 도 단위에서 밀 단위로의 변환은 역수를 취하여 계산하였다.
-   >
-   > 기준포에서 기준겨냥대를 조준하였을 때 최대한 쉽게 방열할 수 있는 기준겨냥대의 위치를 나침의로 가늠할 수 있도록 후퇴사격방위각을 함께 표시하였다.
-   >
-   > 계산한 결과를 실수로 지워버린 경우 바로 직전에 계산한 결과를 불러올 수 있도록 행렬 기능(MATRIX)을 이용하여 저장, 확인할 수 있도록 하였다.
-   >
-   > 최대한 적은 변수 개수를 유지하기 위해 복소수를 사용하여 한 변수에 두 개의 수를 저장하도록 하였다.
+   계산판으로 계산하는 과정을 계산기로 재현하였다.
+   
+   예컨대 ```방안좌표법을 구하기 위해 종·횡좌표를 계산판에 표시하여 수직선에 맞춰 수평거리와 사격방위각을 구하는 작업```은 ```종·횡 데카르트좌표를 극좌표로 변환하여 구해진 r과 θ를 통해 수평거리와 사격방위각 밀값을 도출```하는 방식으로 구현하였다.
+   
+   밀 단위를 도 단위로 변환하기 위해 ```(n Mils)/160*9```을, 도 단위에서 밀 단위로의 변환은 역수를 취하여 계산하였다.
+   
+   기준포에서 기준겨냥대를 조준하였을 때 최대한 쉽게 방열할 수 있는 기준겨냥대의 위치를 나침의로 가늠할 수 있도록 후퇴사격방위각을 함께 표시하였다.
+   
+   계산한 결과를 실수로 지워버린 경우 바로 직전에 계산한 결과를 불러올 수 있도록 행렬 기능(MATRIX)을 이용하여 저장, 확인할 수 있도록 하였다.
+   
+   최대한 적은 변수 개수를 유지하기 위해 복소수를 사용하여 한 변수에 두 개의 수를 저장하도록 하였다.
 
    #### 2.4. 결과물
    
-      - 계산 프로그램
+   - 계산 프로그램
 
-         - Grid (방안좌표법)
-      
-            [MOT.COORD.basic](./MOT.COORD.basic)
-      
-         - Polar Plot (극표정법)
+      - Grid (방안좌표법)
 
-            [MOT.POLAR.basic](./MOT.POLAR.basic)
-      
-         - Shift from a Known Point (기지점전이법)
-      
-            [MOT.RP-TRS.basic](./MOT.RP-TRS.basic)
-      
-         - Firing Correction (수정)
+        [MOT.COORD.basic](./MOT.COORD.basic)
 
-            [MOT.FIX.basic](./MOT.FIX.basic)
+      - Polar Plot (극표정법)
       
-      - 종속 프로그램
-
-         - Recent 1 calculation (최근1개계산)
-     
-           [MOT.RECENT.basic](./MOT.RECENT.basic)
-     
-         - Clean Setup (설정초기화)
+         [MOT.POLAR.basic](./MOT.POLAR.basic)
+         
+      - Shift from a Known Point (기지점전이법)
+      
+         [MOT.RP-TRS.basic](./MOT.RP-TRS.basic)
+         
+      - Firing Correction (수정)
+      
+         [MOT.FIX.basic](./MOT.FIX.basic)
+         
+   - 종속 프로그램
    
-           [ZCLNSETUP.basic](./ZCLNSETUP.basic)
-     
-         - Variable value to 0-6400Mils (변수값을 0-6400밀 이내로)
-     
-           [ZINANGL.basic](./ZINANGL.basic)
+      - Recent 1 calculation (최근1개계산)
+      
+         [MOT.RECENT.basic](./MOT.RECENT.basic)
+         
+      - Clean Setup (설정초기화)
+      
+         [ZCLNSETUP.basic](./ZCLNSETUP.basic)
+         
+      - Variable value to 0-6400Mils (변수값을 0-6400밀 이내로)
+      
+         [ZINANGL.basic](./ZINANGL.basic)
 
 ## 참고문헌
 
