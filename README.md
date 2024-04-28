@@ -83,13 +83,8 @@ Calculate mortar firing chart with Casio scientific calculator
 
 ## References
 
-- TRADOC. (2013). ATP 3-09.30 Techniques for Observed Fire. US Army.
-   - [PDF](./references-archive/ARN5011_ATP%203-09x30%20FINAL%20WEB.pdf)
-- TRADOC. (2009). GTA 17-02-015 Call For Fire. US Army.
-   - [PDF](./references-archive/call_for_fire.pdf)
-- TRADOC. (2017). TC 3-22.91 Mortar Fire Direction Procedures. US Army.
-   - [PDF](./references-archive/ARN3488_TC%203-22x91%20FINAL%20WEB%201.pdf)
-- TRADOC. (2017). DA Form 2399 Computer’s Record (LRA). US Army.
-   - [PDF](./references-archive/ARN3823_DA%20FORM%202399%20FINAL.pdf)
+- TRADOC. (2013). ATP 3-09.30 Techniques for Observed Fire. US Army. [PDF](./references-archive/ARN5011_ATP%203-09x30%20FINAL%20WEB.pdf)
+- TRADOC. (2009). GTA 17-02-015 Call For Fire. US Army. [PDF](./references-archive/call_for_fire.pdf)
+- TRADOC. (2017). TC 3-22.91 Mortar Fire Direction Procedures. US Army. [PDF](./references-archive/ARN3488_TC%203-22x91%20FINAL%20WEB%201.pdf)
+- TRADOC. (2017). DA Form 2399 Computer’s Record (LRA). US Army. [PDF](./references-archive/ARN3823_DA%20FORM%202399%20FINAL.pdf)
 - Jay♬. (2013, April 4). 박격포 공학용 계산 식. Tistory. https://lunaticju.tistory.com/32
-   - [Website](https://lunaticju.tistory.com/32)
