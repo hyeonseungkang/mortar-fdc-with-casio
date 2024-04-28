@@ -1,49 +1,49 @@
-#제목
+# 방안좌표법
 "MOT.COORD"
 
-#목표 좌표
+# 목표 좌표
 "XT"? -> A
 "YT"? -> B
 A+Bi -> A
 "HT"? -> B
 
-#포진 좌표
+# 포진 좌표
 "XM"? -> C
 "YM"? -> D
 C+Di -> C
 "HM"? -> D
 
-#보조사거리
+# 보조사거리
 (B-D)/2 -> B
 
-#M17 평판 시뮬레이션
+# M17 평판 시뮬레이션
 Pol(
   Rep(A)-Rep(C), Imp(A)-Imp(C)
 )
 
-#설정 초기화
+# 설정 초기화
 Prog "ZCLNSETUP"
 
-#수평거리
+# 수평거리
 Locate 1, 1, "MTRN"
 I*10 -> A
 Mat A + [[A, 0][0, 0]] -> Mat A
 Locate 7, 1, A
 
-#사거리
+# 사거리
 Locate 1, 2, "RN"
 I*10+B -> A
 Mat A + [[0, A][0, 0]] -> Mat A
 Locate 7, 2, A
 
-#사격방위각
+# 사격방위각
 Locate 1, 3, "MTAZ"
 (90-J)*160/9 -> P
 Prog "ZINANGL"
 Mat A + [[0, 0][R, 0]] -> Mat A
 Locate 7, 3, R
 
-#후퇴사격방위각
+# 후퇴사격방위각
 P+3200 -> P
 Prog "ZINANGL"
 Locate 1, 4, "MTAZ1"
