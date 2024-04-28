@@ -6,7 +6,7 @@ Calculate mortar firing chart with Casio scientific calculator
 
 ## Requirements
 
-1. Casio scientific calculator including Program Mode (PROG)
+1. Casio scientific calculator including Program Mode (PROG), CASIO BASIC
    - eg. FX-5800P
 
 ## TOC
@@ -24,6 +24,8 @@ Calculate mortar firing chart with Casio scientific calculator
 
 ## References
 
+- CALL FOR FIRE
+   - [GTA 17-02-015](https://raizhemanuel.tripod.com/call_for_fire.pdf)
 - Mortar FDC Field Manual
    - [TC 3-22.91 — MORTAR FIRE DIRECTION PROCEDURES](https://armypubs.army.mil/epubs/DR_pubs/DR_a/pdf/web/ARN3488_TC%203-22x91%20FINAL%20WEB%201.pdf)
 - Firing Record Form
