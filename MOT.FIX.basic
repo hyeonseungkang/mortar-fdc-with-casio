@@ -1,0 +1,38 @@
+# 제목
+"MOT.FIX"
+
+# 최초 수평거리
+"INIT MTRN"? -> A
+A/10 -> A
+
+# 최초 사격방위각
+"INIT MTAZ"? -> B
+B/160*9 -> B
+A+Bi -> A
+
+# 최초 사거리
+"RN"? -> B
+
+"HORIZ VAR"? -> C
+"VERT VAR"? -> D
+
+# 관목방위각
+"OTAZ"? -> E
+E/160*9 -> E
+
+Rec(
+  Rep(A), 90-Imp(A)+E
+)
+Pol(I+C, J+D)
+Rec(I, J-E+Imp(A))
+
+# 설정 초기화
+Prog "ZCLNSETUP"
+
+# 수정 사격방위각
+Locate 1, 1, "MTAZ"
+Locate 7, 1, 2800-I/Rep(A)*100
+
+# 수정 사거리
+Locate 1, 2, "RN"
+Locate 7, 2, Rnd(J-Rep(A)+B)
