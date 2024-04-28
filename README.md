@@ -17,8 +17,7 @@ Calculate mortar firing chart with Casio scientific calculator
 
    #### 1.1. Purpose of development
 
-   
-   The method of calculating the horizontal distance and declination angle by manually drawing it on a plotting board not only does not allow you to know the values precisely, but there is a high possibility that the FDC will make a mistake. To solve this problem, I introduced a scientific calculator to reduce calculation errors and shorten calculation time.
+   The method of calculating horizontal distance and declination angle by manually drawing it on a plotting board is not only imprecise but also prone to human error. To address this, we aim to introduce automation programs with scientific calculator to reduce calculation errors and shorten calculation time.
 
 ### 2. Development Process
 
@@ -37,13 +36,15 @@ Calculate mortar firing chart with Casio scientific calculator
 
    To make it easier to understand what the program is doing, the calculation process performed using the plotting board in the field manual was reproduced as much as possible using a calculator.
 
+   We've reproduced the calculation process as much as possible on the calculator to make it easy to understand what the program is doing, similar to how it would be done manually on a plotting board in field manual.
+
    For example, in order to ```calculate Grid method, the task of calculating the horizontal distance and shooting azimuth by displaying the vertical and horizontal coordinates on the plotting board and aligning them with the vertical line``` is implemented by ```convert the vertical and horizontal Cartesian coordinates to polar coordinates and obtain the horizontal distance and shooting azimuth through r and θ```.
    
    To convert mils to degrees, calculate ```(n Mils)/160*9```, and to convert from degrees to mils, take the reciprocal.
    
-   When aiming at the reference target from the standard gun, the retreat firing azimuth is also displayed so that the position of the reference target can be measured with a compass as easily as possible.
+   When aiming at the base stake from the mortar to follow, the retreat firing azimuth is also displayed so that the position of the base stake can be measured with a compass as easily as possible.
    
-   If the calculated results are accidentally deleted, the matrix mode (MATRIX) can be used to save and check them so that the immediately previous calculated results can be retrieved.
+   If the calculated results are accidentally removed, program with matrix function (MATRIX) can be used to review it which is previous calculated result.
    
    To keep the number of variables as small as possible, complex numbers are used to store two numbers in one variable.
 
