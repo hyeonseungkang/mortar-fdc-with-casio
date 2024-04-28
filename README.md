@@ -13,14 +13,14 @@ Calculate mortar firing chart with Casio scientific calculator
 
 1. Introduction
 2. Calculation PROGs
-    - [방안좌표법](./MOT.COORD.basic)
-    - [극표정법](./MOT.POLAR.basic)
-    - [기지점전이법](./MOT.RP-TRS.basic)
-    - [수정](./MOT.FIX.basic)
+    - [Grid (방안좌표법)](./MOT.COORD.basic)
+    - [Polar Plot (극표정법)](./MOT.POLAR.basic)
+    - [Shift from a Known Point (기지점전이법)](./MOT.RP-TRS.basic)
+    - [Firing Correction (수정)](./MOT.FIX.basic)
 4. Dependency PROGs
-   - [최근1개계산](./MOT.RECENT.basic)
-   - [설정초기화](./ZCLNSETUP)
-   - [0-6400밀 이내로](./ZINANGL.basic)
+   - [Recent 1 calculation (최근1개계산)](./MOT.RECENT.basic)
+   - [Clean Setup (설정초기화)](./ZCLNSETUP)
+   - [Variable to 0-6400Mils (변수값을 0-6400밀 이내로)](./ZINANGL.basic)
 
 ## References
 
