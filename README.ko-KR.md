@@ -6,10 +6,16 @@
 
 [REAMDE.md](./README.md)
 
+<p>
+    <img height="106" src="./assets/20240214_194740.png" />
+    <img height="106" src="./assets/2018121900868_0.jpg" />
+    <img height="106" src="./assets/20231021_111008.jpg" />
+</p>
+
 ## 요구사항
 
 1. CASIO BASIC와 프로그램 모드(PROG)를 지원하는 카시오 공학용 계산기
-   - 예. FX-5800P
+   - 예. FX-5800P <img height="106" src="./assets/20240429_082707.jpg" />
 
 ## 목차
 
