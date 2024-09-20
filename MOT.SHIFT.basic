@@ -1,23 +1,23 @@
 # 기지점전이법
-"MOT.RP-TRS"
+"MOT.SHIFT"
 
 # (확인점 X) - (포진지 X)
-"XRP-XM"? -> A
+"XRP-XMP"? -> A
 # (확인점 Y) - (포진지 Y)
-"YRP-YM"? -> B
+"YRP-YMP"? -> B
 A+Bi -> A
 
 # (확인점 고도) - (포진지 고도) - (표고차)
-"HRP-HM-∠H"? -> B
+"HRP-HMP-V.SFT"? -> B
 # 보조사거리
 B/2 -> B
 
 # 수평전이량
-"HORIZ VAR"? -> C
+"LAT.SFT"? -> C
 C/10 -> C
 
 # 사거리전이량
-"VERT VAR"? -> D
+"RN.SFT"? -> D
 D/10 -> D
 
 # 관목방위각
@@ -52,5 +52,5 @@ Locate 7, 3, R
 # 후퇴사격방위각
 P+3200 -> P
 Prog "ZINANGL"
-Locate 1, 4, "MTAZ"
+Locate 1, 4, "MTAZ1"
 Locate 7, 4, R

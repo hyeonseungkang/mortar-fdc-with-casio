@@ -44,13 +44,14 @@ Calculate mortar firing chart with Casio scientific calculator
 
    We've reproduced the calculation process as much as possible on the calculator to make it easy to understand what the program is doing, similar to how it would be done manually on a plotting board in field manual.
 
+   **(Translation imcomplete)**
    For example, in order to ```calculate Grid method, the task of calculating the horizontal distance and shooting azimuth by displaying the vertical and horizontal coordinates on the plotting board and aligning them with the vertical line``` is implemented by ```convert the vertical and horizontal Cartesian coordinates to polar coordinates and obtain the horizontal distance and shooting azimuth through r and θ```.
    
    To convert mils to degrees, calculate ```(n Mils)/160*9```, and to convert from degrees to mils, take the reciprocal.
    
    When aiming at the base stake from the mortar to follow, the retreat firing azimuth is also displayed so that the position of the base stake can be measured with a compass as easily as possible.
    
-   If the calculated results are accidentally removed, program with matrix function (MATRIX) can be used to review it which is previous calculated result.
+   If the calculated results are accidentally removed, program with matrix function (MATRIX) can be used to review it which is previous calculated result. (Currently on GRID only available.)
    
    To keep the number of variables as small as possible, complex numbers are used to store two numbers in one variable.
 
@@ -60,7 +61,7 @@ Calculate mortar firing chart with Casio scientific calculator
 
       - Grid (방안좌표법)
 
-        [MOT.COORD.basic](./MOT.COORD.basic)
+        [MOT.GRID.basic](./MOT.GRID.basic)
 
       - Polar Plot (극표정법)
       
@@ -68,7 +69,7 @@ Calculate mortar firing chart with Casio scientific calculator
          
       - Shift from a Known Point (기지점전이법)
       
-         [MOT.RP-TRS.basic](./MOT.RP-TRS.basic)
+         [MOT.SHIFT.basic](./MOT.SHIFT.basic)
          
       - Firing Correction (수정)
       

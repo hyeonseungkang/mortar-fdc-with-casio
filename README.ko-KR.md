@@ -48,7 +48,7 @@
    
    기준포에서 기준겨냥대를 조준하였을 때 최대한 쉽게 방열할 수 있는 기준겨냥대의 위치를 나침의로 가늠할 수 있도록 후퇴사격방위각을 함께 표시한다.
    
-   계산한 결과를 실수로 지워버린 경우 바로 직전에 계산한 결과를 불러올 수 있도록 행렬 기능(MATRIX)을 이용하여 저장, 확인할 수 있도록 하였다.
+   계산한 결과를 실수로 지워버린 경우 바로 직전에 계산한 결과를 불러올 수 있도록 행렬 기능(MATRIX)을 이용하여 저장, 확인할 수 있도록 하였다. (아직 방안좌표법에만 구형)
    
    최대한 적은 변수 개수를 유지하기 위해 복소수를 사용하여 한 변수에 두 개의 수를 저장한다.
 
@@ -58,7 +58,7 @@
 
       - Grid (방안좌표법)
 
-        [MOT.COORD.basic](./MOT.COORD.basic)
+        [MOT.GRID.basic](./MOT.GRID.basic)
 
       - Polar Plot (극표정법)
       
@@ -66,7 +66,7 @@
          
       - Shift from a Known Point (기지점전이법)
       
-         [MOT.RP-TRS.basic](./MOT.RP-TRS.basic)
+         [MOT.SHIFT.basic](./MOT.SHIFT.basic)
          
       - Firing Correction (수정)
       
