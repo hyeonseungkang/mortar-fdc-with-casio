@@ -1,5 +1,5 @@
 # 방안좌표법
-"MOT.COORD"
+"MOT.GRID"
 
 # 목표 좌표
 "XT"? -> A
@@ -8,10 +8,10 @@ A+Bi -> A
 "HT"? -> B
 
 # 포진 좌표
-"XM"? -> C
-"YM"? -> D
+"XMP"? -> C
+"YMP"? -> D
 C+Di -> C
-"HM"? -> D
+"HMP"? -> D
 
 # 보조사거리
 (B-D)/2 -> B
