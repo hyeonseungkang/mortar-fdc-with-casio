@@ -22,7 +22,7 @@ D/10 -> D
 E/160*9 -> E
 
 # 계산판 시뮬레이션
-Pol(Rep(A), Imp(A))
+Pol(ReP(A), ImP(A))
 Rec(I, J+E)
 Pol(I, J+D)
 
