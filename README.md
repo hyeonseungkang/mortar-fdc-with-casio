@@ -40,20 +40,23 @@ Calculate mortar firing chart with Casio scientific calculator
 
    #### 2.3. Implementation Plotting board to Calculator
 
-   To make it easier to understand what the program is doing, the calculation process performed using the plotting board in the field manual was reproduced as much as possible using a calculator.
-
-   We've reproduced the calculation process as much as possible on the calculator to make it easy to understand what the program is doing, similar to how it would be done manually on a plotting board in field manual.
-
-   **(Translation imcomplete)**
-   For example, in order to ```calculate Grid method, the task of calculating the horizontal distance and shooting azimuth by displaying the vertical and horizontal coordinates on the plotting board and aligning them with the vertical line``` is implemented by ```convert the vertical and horizontal Cartesian coordinates to polar coordinates and obtain the horizontal distance and shooting azimuth through r and θ```.
+   To enhance understanding, the calculation process described in the field manual for a plotting board has been replicated on the calculator. This approach closely mirrors manual operations but automates the process for accuracy and convenience.
    
-   To convert mils to degrees, calculate ```(n Mils)/160*9```, and to convert from degrees to mils, take the reciprocal.
+   The existing calculation method using a trigonometric function is difficult to apply beyond the solution coordinate method. Therefore, a polar coordinate system was used to calculate the current position with the radius (r) and angle (θ).
+
+   For example, vertical and horizontal coordinates on the calculation board are displayed by converting Cartesian coordinates into polar coordinates (r, θ).
+   
+   To convert mils to degrees, use the formula:  
+   \[
+      \text{Degrees} = \frac{\text{Mils}}{160} \times 9
+   \]
+   For the reverse conversion (degrees to mils), take the reciprocal of this formula.
    
    When aiming at the base stake from the mortar to follow, the retreat firing azimuth is also displayed so that the position of the base stake can be measured with a compass as easily as possible.
    
    If the calculated results are accidentally removed, program with matrix function (MATRIX) can be used to review it which is previous calculated result. (Currently on GRID only available.)
    
-   To keep the number of variables as small as possible, complex numbers are used to store two numbers in one variable.
+   To minimize the number of variables required, complex numbers are utilized, allowing two values (e.g., real and imaginary parts) to be stored in a single variable.
 
 ### 3. Productions
    
