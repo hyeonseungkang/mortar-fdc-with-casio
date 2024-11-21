@@ -46,11 +46,11 @@ Calculate mortar firing chart with Casio scientific calculator
 
    For example, vertical and horizontal coordinates on the calculation board are displayed by converting Cartesian coordinates into polar coordinates (r, θ).
    
-   To convert mils to degrees, use the formula:  
-   \[
-      \text{Degrees} = \frac{\text{Mils}}{160} \times 9
-   \]
-   For the reverse conversion (degrees to mils), take the reciprocal of this formula.
+   To convert mils to degrees:  
+   Degrees = (Mils / 160) × 9
+   
+   To convert degrees to mils (inverse operation):
+   Mils = (Degrees / 9) × 160
    
    When aiming at the base stake from the mortar to follow, the retreat firing azimuth is also displayed so that the position of the base stake can be measured with a compass as easily as possible.
    
