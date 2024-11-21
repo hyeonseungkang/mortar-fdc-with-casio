@@ -64,33 +64,33 @@ Calculate mortar firing chart with Casio scientific calculator
 
       - Grid (방안좌표법)
 
-        [MOT.GRID.basic](./MOT.GRID.basic)
+        [MOT.GRID.prizmbasic](./MOT.GRID.prizmbasic)
 
       - Polar Plot (극표정법)
       
-         [MOT.POLAR.basic](./MOT.POLAR.basic)
+         [MOT.POLAR.prizmbasic](./MOT.POLAR.prizmbasic)
          
       - Shift from a Known Point (기지점전이법)
       
-         [MOT.SHIFT.basic](./MOT.SHIFT.basic)
+         [MOT.SHIFT.prizmbasic](./MOT.SHIFT.prizmbasic)
          
       - Firing Correction (수정)
       
-         [MOT.FIX.basic](./MOT.FIX.basic)
+         [MOT.FIX.prizmbasic](./MOT.FIX.prizmbasic)
          
    - Dependency PROGs
    
       - Read recent 1 calculation (최근1개계산 확인)
       
-         [MOT.RECENT.basic](./MOT.RECENT.basic)
+         [MOT.RECENT.prizmbasic](./MOT.RECENT.prizmbasic)
          
       - Clean Setup (설정초기화)
       
-         [ZCLNSETUP.basic](./ZCLNSETUP.basic)
+         [ZCLNSETUP.prizmbasic](./ZCLNSETUP.prizmbasic)
          
       - Variable value to 0-6400Mils (변수값을 0-6400밀 이내로)
       
-         [ZINANGL.basic](./ZINANGL.basic)
+         [ZINANGL.prizmbasic](./ZINANGL.prizmbasic)
 
 ## References
 
