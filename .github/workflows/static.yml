@@ -51,6 +51,7 @@ jobs:
       run: |
         cd build/output/
         for filename in $(ls ../../src/prizmbasic/); do . ../2html.sh ../../src/prizmbasic/$filename > ./$filename.html; done
+        cat MOT.FIX.prizmbasic.html
 
     - name: Run node script
       run: |
