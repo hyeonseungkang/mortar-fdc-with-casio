@@ -64,7 +64,6 @@ jobs:
         git config --global user.email "GitHub Actions"
         git config --global user.name "actions@github.com"
         git rm -r --cached .
-        git rm -r .
         git add .
         git add --force ./src/markdown/*.md
         git commit -m "$GIT_COMMIT_MESSAGE"
