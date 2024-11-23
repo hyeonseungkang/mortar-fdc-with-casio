@@ -12,6 +12,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@tsconfig/recommended": "^1.0.8",
     "css-simple-parser": "^3.0.0",
     "node-html-parser": "^6.1.13",
     "typescript": "^5.7.2"
