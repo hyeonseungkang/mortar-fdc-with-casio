@@ -47,6 +47,8 @@ jobs:
         npm run build && npm run start
     - name: Push to main
       run: |
+         git config --global user.email "GitHub Actions"
+        git config --global user.name "actions@github.com"
         git fetch origin main
         git checkout main
         git add -f ./src/markdown/*.md
