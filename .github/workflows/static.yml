@@ -46,10 +46,10 @@ jobs:
         sudo cp -r ../prizmbasic.vim $VIMRUNTIME/syntax/
         ls $VIMRUNTIME/syntax/ | grep prizmbasic
         for filename in $(ls ../../src/prizmbasic/); do . ../2html.sh ../../src/prizmbasic/$filename > ./$filename.html; done
-        cat MOT.FIX.prizmbasic.html
 
     - name: Run node script
       run: |
+        rm -rf src/html/*.html
         cd build/
         npm install
         npm run build && npm run start
@@ -61,7 +61,6 @@ jobs:
         git config --global user.name "actions@github.com"
         git rm -r --cached .
         git add .
-        git add --force ./src/markdown/*.md
         git commit -m "$GIT_COMMIT_MESSAGE" || echo "Nothing to commit, repository is up to date."
 
     - name: Push changes to deploy branch

@@ -23,6 +23,7 @@ const filenames = readdirSync(resolve('output/')).filter(v => v.includes('.html'
         for (const style of styles) {
             preRaw = preRaw.replaceAll(`class="${style.selector}"`, `style="${style.body}"`)
         }
-        writeFileSync(resolve('../src/markdown/', `${filename.replace('.html', '')}.md`), preRaw)
+        preRaw = preRaw.replaceAll('\n', '<br>\n')
+        writeFileSync(resolve('../src/html/', filename), preRaw)
     }
 })()
