@@ -1,68 +1,68 @@
 
 # 수정
-&quot;MOT.FIX&quot;
+<span style="color:#0000c0;text-decoration:underline;">&quot;MOT.FIX&quot;</span>
 
 # 사격방위각
-&quot;MTAZ&quot;? -&gt; A
-A/160*9 -&gt; A
+<span style="color:#0000c0;text-decoration:underline;">&quot;MTAZ&quot;</span>? -&gt; A
+A/<span style="color:#0000c0;text-decoration:underline;">160</span>*<span style="color:#0000c0;text-decoration:underline;">9</span> -&gt; A
 
 # 수평거리
-&quot;MTRN&quot;? -&gt; B
-B/10 -&gt; B
+<span style="color:#0000c0;text-decoration:underline;">&quot;MTRN&quot;</span>? -&gt; B
+B/<span style="color:#0000c0;text-decoration:underline;">10</span> -&gt; B
 A+Bi -&gt; A
 
 # 관목방위각
-&quot;OTAZ&quot;? -&gt; B
-B/160*9 -&gt; B
+<span style="color:#0000c0;text-decoration:underline;">&quot;OTAZ&quot;</span>? -&gt; B
+B/<span style="color:#0000c0;text-decoration:underline;">160</span>*<span style="color:#0000c0;text-decoration:underline;">9</span> -&gt; B
 
 # 이전 수평수정량
-&quot;DEF.PST.CORR&quot;? -&gt; C
+<span style="color:#0000c0;text-decoration:underline;">&quot;DEF.PST.CORR&quot;</span>? -&gt; C
 B+Ci -&gt; B
 
 # 이전 사거리수정량
-&quot;RN.PST.CORR&quot;? -&gt; C
+<span style="color:#0000c0;text-decoration:underline;">&quot;RN.PST.CORR&quot;</span>? -&gt; C
 
 # 현재 수평수정량
-&quot;DEF.PRE.CORR&quot;? -&gt; D
+<span style="color:#0000c0;text-decoration:underline;">&quot;DEF.PRE.CORR&quot;</span>? -&gt; D
 C+Di -&gt; C
 
 # 현재 사거리수정량
-&quot;RN.PRE.CORR&quot;? -&gt; D
+<span style="color:#0000c0;text-decoration:underline;">&quot;RN.PRE.CORR&quot;</span>? -&gt; D
 
 # 최근 사격방위각
-&quot;LAST.DEF&quot;? -&gt; E
+<span style="color:#0000c0;text-decoration:underline;">&quot;LAST.DEF&quot;</span>? -&gt; E
 D+Ei -&gt; D
 
 # 최근 사거리
-&quot;LAST.RN&quot;? -&gt; E
+<span style="color:#0000c0;text-decoration:underline;">&quot;LAST.RN&quot;</span>? -&gt; E
 
-Rec(
-    ImP(A),
-    90-ReP(A)+ReP(B)
+<span style="color:#804000;text-decoration:underline;">Rec</span>(
+    <span style="color:#804000;text-decoration:underline;">ImP</span>(A),
+    <span style="color:#0000c0;text-decoration:underline;">90</span>-<span style="color:#804000;text-decoration:underline;">ReP</span>(A)+<span style="color:#804000;text-decoration:underline;">ReP</span>(B)
 )
 I+Ji -&gt; F
-Pol(
-    ReP(F)+ImP(B),
-    ImP(F)+ReP(C)
+<span style="color:#804000;text-decoration:underline;">Pol</span>(
+    <span style="color:#804000;text-decoration:underline;">ReP</span>(F)+<span style="color:#804000;text-decoration:underline;">ImP</span>(B),
+    <span style="color:#804000;text-decoration:underline;">ImP</span>(F)+<span style="color:#804000;text-decoration:underline;">ReP</span>(C)
 )
 I+Ji -&gt; G
-Pol(
-    ReP(F)+ImP(B)+ImP(C),
-    ImP(F)+ReP(C)+ReP(D)
+<span style="color:#804000;text-decoration:underline;">Pol</span>(
+    <span style="color:#804000;text-decoration:underline;">ReP</span>(F)+<span style="color:#804000;text-decoration:underline;">ImP</span>(B)+<span style="color:#804000;text-decoration:underline;">ImP</span>(C),
+    <span style="color:#804000;text-decoration:underline;">ImP</span>(F)+<span style="color:#804000;text-decoration:underline;">ReP</span>(C)+<span style="color:#804000;text-decoration:underline;">ReP</span>(D)
 )
-Rec(
+<span style="color:#804000;text-decoration:underline;">Rec</span>(
     I,
-    J+90-ImP(G)
+    J+<span style="color:#0000c0;text-decoration:underline;">90</span>-<span style="color:#804000;text-decoration:underline;">ImP</span>(G)
 )
 
 # 설정 초기화
-Prog &quot;ZCLNSETUP&quot;
+<span style="color:#008080;font-weight:bold;">Prog</span> <span style="color:#0000c0;text-decoration:underline;">&quot;ZCLNSETUP&quot;</span>
 
-Locate 1, 1, &quot;DEF+0.&quot;
-Locate 8, 1, ImP(D)-I
-Locate 1, 2, &quot;DEF+2.&quot;
-Locate 8, 2, ImP(D)-I/ImP(A)*10
-Locate 1, 3, &quot;DEF+3.&quot;
-Locate 8, 3, ImP(D)-I/ImP(A)*100
-Locate 1, 4, &quot;RN&quot;
-Locate 8, 4, E+(J-ReP(G))
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">&quot;DEF+0.&quot;</span>
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">8</span>, <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#804000;text-decoration:underline;">ImP</span>(D)-I
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">2</span>, <span style="color:#0000c0;text-decoration:underline;">&quot;DEF+2.&quot;</span>
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">8</span>, <span style="color:#0000c0;text-decoration:underline;">2</span>, <span style="color:#804000;text-decoration:underline;">ImP</span>(D)-I/<span style="color:#804000;text-decoration:underline;">ImP</span>(A)*<span style="color:#0000c0;text-decoration:underline;">10</span>
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">3</span>, <span style="color:#0000c0;text-decoration:underline;">&quot;DEF+3.&quot;</span>
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">8</span>, <span style="color:#0000c0;text-decoration:underline;">3</span>, <span style="color:#804000;text-decoration:underline;">ImP</span>(D)-I/<span style="color:#804000;text-decoration:underline;">ImP</span>(A)*<span style="color:#0000c0;text-decoration:underline;">100</span>
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">4</span>, <span style="color:#0000c0;text-decoration:underline;">&quot;RN&quot;</span>
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">8</span>, <span style="color:#0000c0;text-decoration:underline;">4</span>, E+(J-<span style="color:#804000;text-decoration:underline;">ReP</span>(G))

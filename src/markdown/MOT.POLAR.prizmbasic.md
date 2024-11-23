@@ -1,50 +1,50 @@
 
 # 극표정법
-&quot;MOT.POLAR&quot;
+<span style="color:#0000c0;text-decoration:underline;">&quot;MOT.POLAR&quot;</span>
 
 # (FO X) - (포진지 X)
-&quot;XF0-XMP&quot;? -&gt; A
+<span style="color:#0000c0;text-decoration:underline;">&quot;XF0-XMP&quot;</span>? -&gt; A
 
 # (FO Y) - (포진지 Y)
-&quot;YF0-YMP&quot;? -&gt; B
+<span style="color:#0000c0;text-decoration:underline;">&quot;YF0-YMP&quot;</span>? -&gt; B
 A+Bi -&gt; A
 
 # (표적 고도) - (포진지 고도) + (표고차)
-&quot;HF0-HMP+V.SFT&quot;? -&gt; B
+<span style="color:#0000c0;text-decoration:underline;">&quot;HF0-HMP+V.SFT&quot;</span>? -&gt; B
 # 보조사거리
-B/2 -&gt; B
+B/<span style="color:#0000c0;text-decoration:underline;">2</span> -&gt; B
 
 # 관목거리
-&quot;OTDS&quot; -&gt; D
-D/10 -&gt; D
+<span style="color:#0000c0;text-decoration:underline;">&quot;OTDS&quot;</span> -&gt; D
+D/<span style="color:#0000c0;text-decoration:underline;">10</span> -&gt; D
 
 # 관목방위각
-&quot;OTAZ&quot;? -&gt; E
-E/160*9 -&gt; E
+<span style="color:#0000c0;text-decoration:underline;">&quot;OTAZ&quot;</span>? -&gt; E
+E/<span style="color:#0000c0;text-decoration:underline;">160</span>*<span style="color:#0000c0;text-decoration:underline;">9</span> -&gt; E
 
 # 계산판 시뮬레이션
-Pol(ReP(A), ImP(A))
-Rec(I, J+E)
-Pol(I, J+D)
+<span style="color:#804000;text-decoration:underline;">Pol</span>(<span style="color:#804000;text-decoration:underline;">ReP</span>(A), <span style="color:#804000;text-decoration:underline;">ImP</span>(A))
+<span style="color:#804000;text-decoration:underline;">Rec</span>(I, J+E)
+<span style="color:#804000;text-decoration:underline;">Pol</span>(I, J+D)
 
-Cls
+<span style="color:#008080;font-weight:bold;">Cls</span>
 
 # 수평거리
-Locate 1, 1, &quot;MTRN&quot;
-Locate 7, 1, I*10
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">&quot;MTRN&quot;</span>
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">7</span>, <span style="color:#0000c0;text-decoration:underline;">1</span>, I*<span style="color:#0000c0;text-decoration:underline;">10</span>
 
 # 사거리
-Locate 1, 2, &quot;RN&quot;
-Locate 7, 2, I*10+B
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">2</span>, <span style="color:#0000c0;text-decoration:underline;">&quot;RN&quot;</span>
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">7</span>, <span style="color:#0000c0;text-decoration:underline;">2</span>, I*<span style="color:#0000c0;text-decoration:underline;">10</span>+B
 
 # 사격방위각
-Locate 1, 3, &quot;MTAZ&quot;
-(90-(J-E))*160/9 -&gt; P
-Prog &quot;ZINANGL&quot;
-Locate 7, 3, R
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">3</span>, <span style="color:#0000c0;text-decoration:underline;">&quot;MTAZ&quot;</span>
+(<span style="color:#0000c0;text-decoration:underline;">90</span>-(J-E))*<span style="color:#0000c0;text-decoration:underline;">160</span>/<span style="color:#0000c0;text-decoration:underline;">9</span> -&gt; P
+<span style="color:#008080;font-weight:bold;">Prog</span> <span style="color:#0000c0;text-decoration:underline;">&quot;ZINANGL&quot;</span>
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">7</span>, <span style="color:#0000c0;text-decoration:underline;">3</span>, R
 
 # 후퇴사격방위각
-P+3200 -&gt; P
-Prog &quot;ZINANGL&quot;
-Locate 1, 4, &quot;MTAZ1&quot;
-Locate 7, 4, R
+P+<span style="color:#0000c0;text-decoration:underline;">3200</span> -&gt; P
+<span style="color:#008080;font-weight:bold;">Prog</span> <span style="color:#0000c0;text-decoration:underline;">&quot;ZINANGL&quot;</span>
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">4</span>, <span style="color:#0000c0;text-decoration:underline;">&quot;MTAZ1&quot;</span>
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">7</span>, <span style="color:#0000c0;text-decoration:underline;">4</span>, R

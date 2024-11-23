@@ -1,50 +1,50 @@
 
 # 방안좌표법
-&quot;MOT.GRID&quot;
+<span style="color:#0000c0;text-decoration:underline;">&quot;MOT.GRID&quot;</span>
 
 # 목표 좌표
-&quot;XT&quot;? -&gt; A
-&quot;YT&quot;? -&gt; B
+<span style="color:#0000c0;text-decoration:underline;">&quot;XT&quot;</span>? -&gt; A
+<span style="color:#0000c0;text-decoration:underline;">&quot;YT&quot;</span>? -&gt; B
 A+Bi -&gt; A
-&quot;HT&quot;? -&gt; B
+<span style="color:#0000c0;text-decoration:underline;">&quot;HT&quot;</span>? -&gt; B
 
 # 포진 좌표
-&quot;XMP&quot;? -&gt; C
-&quot;YMP&quot;? -&gt; D
+<span style="color:#0000c0;text-decoration:underline;">&quot;XMP&quot;</span>? -&gt; C
+<span style="color:#0000c0;text-decoration:underline;">&quot;YMP&quot;</span>? -&gt; D
 C+Di -&gt; C
-&quot;HMP&quot;? -&gt; D
+<span style="color:#0000c0;text-decoration:underline;">&quot;HMP&quot;</span>? -&gt; D
 
 # 보조사거리
-(B-D)/2 -&gt; B
+(B-D)/<span style="color:#0000c0;text-decoration:underline;">2</span> -&gt; B
 
 # 계산판 시뮬레이션
-Pol(ReP(A)-ReP(C), ImP(A)-ImP(C))
+<span style="color:#804000;text-decoration:underline;">Pol</span>(<span style="color:#804000;text-decoration:underline;">ReP</span>(A)-<span style="color:#804000;text-decoration:underline;">ReP</span>(C), <span style="color:#804000;text-decoration:underline;">ImP</span>(A)-<span style="color:#804000;text-decoration:underline;">ImP</span>(C))
 
 # 설정 초기화
-Prog &quot;ZCLNSETUP&quot;
+<span style="color:#008080;font-weight:bold;">Prog</span> <span style="color:#0000c0;text-decoration:underline;">&quot;ZCLNSETUP&quot;</span>
 
 # 수평거리
-Locate 1, 1, &quot;MTRN&quot;
-I*10 -&gt; A
-Mat A + [[A, 0][0, 0]] -&gt; Mat A
-Locate 7, 1, A
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">&quot;MTRN&quot;</span>
+I*<span style="color:#0000c0;text-decoration:underline;">10</span> -&gt; A
+<span style="color:#804000;text-decoration:underline;">Mat</span> A + [[A, <span style="color:#0000c0;text-decoration:underline;">0</span>][<span style="color:#0000c0;text-decoration:underline;">0</span>, <span style="color:#0000c0;text-decoration:underline;">0</span>]] -&gt; <span style="color:#804000;text-decoration:underline;">Mat</span> A
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">7</span>, <span style="color:#0000c0;text-decoration:underline;">1</span>, A
 
 # 사거리
-Locate 1, 2, &quot;RN&quot;
-I*10+B -&gt; A
-Mat A + [[0, A][0, 0]] -&gt; Mat A
-Locate 7, 2, A
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">2</span>, <span style="color:#0000c0;text-decoration:underline;">&quot;RN&quot;</span>
+I*<span style="color:#0000c0;text-decoration:underline;">10</span>+B -&gt; A
+<span style="color:#804000;text-decoration:underline;">Mat</span> A + [[<span style="color:#0000c0;text-decoration:underline;">0</span>, A][<span style="color:#0000c0;text-decoration:underline;">0</span>, <span style="color:#0000c0;text-decoration:underline;">0</span>]] -&gt; <span style="color:#804000;text-decoration:underline;">Mat</span> A
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">7</span>, <span style="color:#0000c0;text-decoration:underline;">2</span>, A
 
 # 사격방위각
-Locate 1, 3, &quot;MTAZ&quot;
-(90-J)*160/9 -&gt; P
-Prog &quot;ZINANGL&quot;
-Mat A + [[0, 0][R, 0]] -&gt; Mat A
-Locate 7, 3, R
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">3</span>, <span style="color:#0000c0;text-decoration:underline;">&quot;MTAZ&quot;</span>
+(<span style="color:#0000c0;text-decoration:underline;">90</span>-J)*<span style="color:#0000c0;text-decoration:underline;">160</span>/<span style="color:#0000c0;text-decoration:underline;">9</span> -&gt; P
+<span style="color:#008080;font-weight:bold;">Prog</span> <span style="color:#0000c0;text-decoration:underline;">&quot;ZINANGL&quot;</span>
+<span style="color:#804000;text-decoration:underline;">Mat</span> A + [[<span style="color:#0000c0;text-decoration:underline;">0</span>, <span style="color:#0000c0;text-decoration:underline;">0</span>][R, <span style="color:#0000c0;text-decoration:underline;">0</span>]] -&gt; <span style="color:#804000;text-decoration:underline;">Mat</span> A
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">7</span>, <span style="color:#0000c0;text-decoration:underline;">3</span>, R
 
 # 후퇴사격방위각
-P+3200 -&gt; P
-Prog &quot;ZINANGL&quot;
-Locate 1, 4, &quot;MTAZ1&quot;
-Mat A + [[0, 0][0, R]] -&gt; Mat A
-Locate 7, 4, R
+P+<span style="color:#0000c0;text-decoration:underline;">3200</span> -&gt; P
+<span style="color:#008080;font-weight:bold;">Prog</span> <span style="color:#0000c0;text-decoration:underline;">&quot;ZINANGL&quot;</span>
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">4</span>, <span style="color:#0000c0;text-decoration:underline;">&quot;MTAZ1&quot;</span>
+<span style="color:#804000;text-decoration:underline;">Mat</span> A + [[<span style="color:#0000c0;text-decoration:underline;">0</span>, <span style="color:#0000c0;text-decoration:underline;">0</span>][<span style="color:#0000c0;text-decoration:underline;">0</span>, R]] -&gt; <span style="color:#804000;text-decoration:underline;">Mat</span> A
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">7</span>, <span style="color:#0000c0;text-decoration:underline;">4</span>, R
