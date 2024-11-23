@@ -41,7 +41,6 @@ jobs:
         cd build/output/
         for filename in $(ls ../../src/prizmbasic/); do source ../2html.sh ../../src/prizmbasic/$filename > ./$filename.html; done
     - name: Run node script
-      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
