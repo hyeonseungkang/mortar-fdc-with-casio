@@ -84,14 +84,3 @@ jobs:
         title: "Auto PR: main to deploy"
         body: "This pull request was created automatically to merge changes from main to deploy."
         draft: false
-
-    - name: Sleep for 15 seconds
-      uses: jakejarvis/wait-action@master
-      with:
-        time: '15s'
-
-    - name: automerge
-      id: automerge
-      uses: "pascalgn/automerge-action@v0.16.4"
-      env:
-        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
