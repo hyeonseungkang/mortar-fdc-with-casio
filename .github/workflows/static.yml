@@ -34,6 +34,7 @@ jobs:
         sudo cp -r ../prizmbasic.vim $VIMRUNTIME/syntax/
     - name: Apply syntax highlight
       run: |
+        pwd
         for filename in $(ls ../../src/prizmbasic/); do source ../2html.sh ../../src/prizmbasic/$filename > ./$filename.html; done
         cd ..
     - name: Run node script
