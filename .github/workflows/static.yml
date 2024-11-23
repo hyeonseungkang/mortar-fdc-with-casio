@@ -7,6 +7,10 @@ on:
   push:
     branches: [ "deploy" ]
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write
+
 jobs:
   build:
 
@@ -36,7 +40,6 @@ jobs:
       run: |
         cd build/output/
         for filename in $(ls ../../src/prizmbasic/); do source ../2html.sh ../../src/prizmbasic/$filename > ./$filename.html; done
-        cd ..
     - name: Run node script
       run: |
         cd build/
@@ -44,7 +47,6 @@ jobs:
         npm run build && npm run start
     - name: Push to main
       run: |
-        cd ..
         git fetch origin main
         git checkout main
         git add -f ./src/markdown/*.md
