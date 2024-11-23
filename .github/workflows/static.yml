@@ -61,7 +61,6 @@ jobs:
         export GIT_COMMIT_MESSAGE=$(cat ~/GIT_COMMIT_MESSAGE)
         git config --global user.email "GitHub Actions"
         git config --global user.name "actions@github.com"
-        git add .
         git fetch origin main
         git checkout main
         git rm -r --cached .
@@ -72,7 +71,7 @@ jobs:
     - name: Merge deploy branch into main
       run: |
         export GIT_COMMIT_MESSAGE=$(cat ~/GIT_COMMIT_MESSAGE)
-        git merge --no-ff deploy -m "$GIT_COMMIT_MESSAGE" --allow-unrelated-histories
+        git merge --no-ff deploy -m "$GIT_COMMIT_MESSAGE"
 
     - name: Push changes to main branch
       env:
