@@ -5,7 +5,7 @@ import CssParser from 'css-simple-parser';
 
 const filenames = readdirSync(resolve('output/')).filter(v => v.includes('.html'));
 
-(async () => {
+(() => {
     for (const filename of filenames) {
         const raw = readFileSync(resolve('output/', filename)).toString('utf-8')
         const root = parse(raw)
