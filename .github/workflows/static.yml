@@ -52,6 +52,7 @@ jobs:
         git config --global user.name "actions@github.com"
         git fetch origin main
         git checkout main
+        git add .
         git add -f ./src/markdown/*.md
     - name: Merge deploy branch into main
       run: |
