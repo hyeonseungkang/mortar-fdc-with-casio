@@ -45,6 +45,9 @@ jobs:
         cd build/
         npm install
         npm run build && npm run start
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
     - name: Push to main
       run: |
         export GIT_COMMIT_MESSAGE=$(cat ~/GIT_COMMIT_MESSAGE)
