@@ -11,7 +11,7 @@ file2html() {
 	local destfile="$srcfile.html"
 	cp "$1" "$srcfile"
 
-	vim -E -c "let g:html_no_progress=1" -c "set syntax=prizmbasic" \
+	vim -E -c "let g:html_no_progress=1" -c "syntax on" -c "set syntax=prizmbasic" \
 		${colorscheme:+-c "colo $colorscheme"} \
 		${source:+-c "source $source"} \
 		-c "runtime syntax/2html.vim" \
