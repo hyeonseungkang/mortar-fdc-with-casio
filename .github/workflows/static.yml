@@ -43,6 +43,7 @@ jobs:
         vim -c "put =expand('\$VIMRUNTIME')" -c "wq! .vimruntime"
         export VIMRUNTIME=$(cat .vimruntime)
         sudo cp -r ../prizmbasic.vim $VIMRUNTIME/syntax/
+        ls $VIMRUNTIME/syntax/ | grep prizmbasic
 
     - name: Apply syntax highlight
       run: |
