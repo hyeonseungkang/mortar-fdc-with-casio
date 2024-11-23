@@ -58,14 +58,14 @@ jobs:
         npm install
         npm run build && npm run start
 
-    - name: Push to main
+    - name: Commit to deploy branch
       run: |
         export GIT_COMMIT_MESSAGE=$(cat ~/GIT_COMMIT_MESSAGE)
         git config --global user.email "GitHub Actions"
         git config --global user.name "actions@github.com"
         git rm -r --cached .
         git add .
-        git add -f ./src/markdown/*.md
+        git add --force ./src/markdown/*.md
         git commit -m "$GIT_COMMIT_MESSAGE"
 
     - name: Merge deploy branch into main
