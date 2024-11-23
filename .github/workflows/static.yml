@@ -35,7 +35,7 @@ jobs:
         cache: 'npm'
     - name: Set VIM environment
       run: |
-        export GIT_COMMIT_MESSAGE=$(git log -1 --pretty=%B)
+        git log -1 --pretty=%B > ~/GIT_COMMIT_MESSAGE
         sudo apt install -y vim
         cd build/output/
         vim -c "put =expand('\$VIMRUNTIME')" -c "wq! .vimruntime"
@@ -52,6 +52,7 @@ jobs:
         npm run build && npm run start
     - name: Push to main
       run: |
+        export GIT_COMMIT_MESSAGE=$(cat ~/GIT_COMMIT_MESSAGE)
         git config --global user.email "GitHub Actions"
         git config --global user.name "actions@github.com"
         git fetch origin main
@@ -62,6 +63,7 @@ jobs:
         git commit -m "$GIT_COMMIT_MESSAGE"
     - name: Merge deploy branch into main
       run: |
+        export GIT_COMMIT_MESSAGE=$(cat ~/GIT_COMMIT_MESSAGE)
         git merge --no-ff deploy -m "$GIT_COMMIT_MESSAGE" --allow-unrelated-histories
     - name: Push changes to main branch
       env:
