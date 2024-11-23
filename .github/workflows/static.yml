@@ -27,11 +27,11 @@ jobs:
     - name: Set VIM environment
       run: |
         export GIT_COMMIT_MESSAGE=$(git log -1 --pretty=%B)
-        apt install -y vim
+        sudo apt install -y vim
         cd build/output/
         vim -c "put =expand('\$VIMRUNTIME')" -c "wq! .vimruntime"
         export VIMRUNTIME=$(cat .vimruntime)
-        cp -r ../prizmbasic.vim $VIMRUNTIME/syntax/
+        sudo cp -r ../prizmbasic.vim $VIMRUNTIME/syntax/
     - name: Apply syntax highlight
       run: |
         for filename in $(ls ../../src/prizmbasic/); do source ../2html.sh ../../src/prizmbasic/$filename > ./$filename.html; done
