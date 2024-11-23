@@ -38,7 +38,7 @@ jobs:
     - name: Set VIM environment
       run: |
         git log -1 --pretty=%B > ~/GIT_COMMIT_MESSAGE
-        sudo apt install -y vim
+        sudo apt install -y -qq vim
         cd build/output/
         vim -c "put =expand('\$VIMRUNTIME')" -c "wq! .vimruntime"
         export VIMRUNTIME=$(cat .vimruntime)
@@ -71,7 +71,7 @@ jobs:
         export GIT_COMMIT_MESSAGE=$(cat ~/GIT_COMMIT_MESSAGE)
         git fetch origin main
         git checkout main
-        git merge deploy -m "$GIT_COMMIT_MESSAGE" --allow-unrelated-histories
+        git merge deploy -X ours -m "$GIT_COMMIT_MESSAGE" --allow-unrelated-histories
 
     - name: Push changes to main branch
       env:
