@@ -71,7 +71,7 @@ jobs:
         export GIT_COMMIT_MESSAGE=$(cat ~/GIT_COMMIT_MESSAGE)
         git fetch origin main
         git checkout main
-        git merge deploy -m "$GIT_COMMIT_MESSAGE"
+        git merge deploy -m "$GIT_COMMIT_MESSAGE" --allow-unrelated-histories
 
     - name: Push changes to main branch
       env:
