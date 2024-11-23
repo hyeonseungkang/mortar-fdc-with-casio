@@ -1,0 +1,50 @@
+<br>
+# 극표정법<br>
+<span style="color:#0000c0;text-decoration:underline;">&quot;MOT.POLAR&quot;</span><br>
+<br>
+# (FO X) - (포진지 X)<br>
+<span style="color:#0000c0;text-decoration:underline;">&quot;XF0-XMP&quot;</span>? -&gt; A<br>
+<br>
+# (FO Y) - (포진지 Y)<br>
+<span style="color:#0000c0;text-decoration:underline;">&quot;YF0-YMP&quot;</span>? -&gt; B<br>
+A+Bi -&gt; A<br>
+<br>
+# (표적 고도) - (포진지 고도) + (표고차)<br>
+<span style="color:#0000c0;text-decoration:underline;">&quot;HF0-HMP+V.SFT&quot;</span>? -&gt; B<br>
+# 보조사거리<br>
+B/<span style="color:#0000c0;text-decoration:underline;">2</span> -&gt; B<br>
+<br>
+# 관목거리<br>
+<span style="color:#0000c0;text-decoration:underline;">&quot;OTDS&quot;</span> -&gt; D<br>
+D/<span style="color:#0000c0;text-decoration:underline;">10</span> -&gt; D<br>
+<br>
+# 관목방위각<br>
+<span style="color:#0000c0;text-decoration:underline;">&quot;OTAZ&quot;</span>? -&gt; E<br>
+E/<span style="color:#0000c0;text-decoration:underline;">160</span>*<span style="color:#0000c0;text-decoration:underline;">9</span> -&gt; E<br>
+<br>
+# 계산판 시뮬레이션<br>
+<span style="color:#804000;text-decoration:underline;">Pol</span>(<span style="color:#804000;text-decoration:underline;">ReP</span>(A), <span style="color:#804000;text-decoration:underline;">ImP</span>(A))<br>
+<span style="color:#804000;text-decoration:underline;">Rec</span>(I, J+E)<br>
+<span style="color:#804000;text-decoration:underline;">Pol</span>(I, J+D)<br>
+<br>
+<span style="color:#008080;font-weight:bold;">Cls</span><br>
+<br>
+# 수평거리<br>
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">&quot;MTRN&quot;</span><br>
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">7</span>, <span style="color:#0000c0;text-decoration:underline;">1</span>, I*<span style="color:#0000c0;text-decoration:underline;">10</span><br>
+<br>
+# 사거리<br>
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">2</span>, <span style="color:#0000c0;text-decoration:underline;">&quot;RN&quot;</span><br>
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">7</span>, <span style="color:#0000c0;text-decoration:underline;">2</span>, I*<span style="color:#0000c0;text-decoration:underline;">10</span>+B<br>
+<br>
+# 사격방위각<br>
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">3</span>, <span style="color:#0000c0;text-decoration:underline;">&quot;MTAZ&quot;</span><br>
+(<span style="color:#0000c0;text-decoration:underline;">90</span>-(J-E))*<span style="color:#0000c0;text-decoration:underline;">160</span>/<span style="color:#0000c0;text-decoration:underline;">9</span> -&gt; P<br>
+<span style="color:#008080;font-weight:bold;">Prog</span> <span style="color:#0000c0;text-decoration:underline;">&quot;ZINANGL&quot;</span><br>
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">7</span>, <span style="color:#0000c0;text-decoration:underline;">3</span>, R<br>
+<br>
+# 후퇴사격방위각<br>
+P+<span style="color:#0000c0;text-decoration:underline;">3200</span> -&gt; P<br>
+<span style="color:#008080;font-weight:bold;">Prog</span> <span style="color:#0000c0;text-decoration:underline;">&quot;ZINANGL&quot;</span><br>
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">4</span>, <span style="color:#0000c0;text-decoration:underline;">&quot;MTAZ1&quot;</span><br>
+<span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">7</span>, <span style="color:#0000c0;text-decoration:underline;">4</span>, R<br>
