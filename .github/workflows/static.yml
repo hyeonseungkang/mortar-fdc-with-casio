@@ -39,7 +39,7 @@ jobs:
     - name: Run node script
       run: |
         npm install
-        npm build && npm start
+        npm run build && npm run start
     - name: Push to main
       run: |
         cd ..
