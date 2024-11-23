@@ -92,12 +92,10 @@ jobs:
         body: "This pull request was created automatically to merge changes from main to deploy."
         draft: false
 
-    - name: Wait for Pull Request to be Ready
-      uses: jakejarvis/wait-for-pull-request@v1
+    - name: Sleep for 15 seconds
+      uses: jakejarvis/wait-action@master
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        pr_number: ${{ steps.create-pr.outputs.pull_request_number }}
-        timeout: 300
+        time: '15s'
 
     - name: Auto Merge Pull Request
       run: |
