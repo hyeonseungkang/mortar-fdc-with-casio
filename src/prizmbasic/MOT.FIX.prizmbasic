@@ -35,24 +35,12 @@ D+Ei -> D
 # 최근 사거리
 "LAST.RN"? -> E
 
-Rec(
-    ImP(A),
-    90-ReP(A)+ReP(B)
-)
+Rec(ImP(A), 90-ReP(A)+ReP(B))
 I+Ji -> F
-Pol(
-    ReP(F)+ImP(B),
-    ImP(F)+ReP(C)
-)
+Pol(ReP(F)+ImP(B), ImP(F)+ReP(C))
 I+Ji -> G
-Pol(
-    ReP(F)+ImP(B)+ImP(C),
-    ImP(F)+ReP(C)+ReP(D)
-)
-Rec(
-    I,
-    J+90-ImP(G)
-)
+Pol(ReP(F)+ImP(B)+ImP(C), ImP(F)+ReP(C)+ReP(D))
+Rec(I, J+90-ImP(G))
 
 # 설정 초기화
 Prog "ZCLNSETUP"
