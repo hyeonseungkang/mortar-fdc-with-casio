@@ -37,19 +37,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Set VIM environment
+    - name: Apply syntax highlight
       run: |
-        git log -1 --pretty=%B > ~/GIT_COMMIT_MESSAGE
         sudo apt install -y -qq vim
         cd build/output/
         vim -c "put =expand('\$VIMRUNTIME')" -c "wq! .vimruntime"
         export VIMRUNTIME=$(cat .vimruntime)
         sudo cp -r ../prizmbasic.vim $VIMRUNTIME/syntax/
         ls $VIMRUNTIME/syntax/ | grep prizmbasic
-
-    - name: Apply syntax highlight
-      run: |
-        cd build/output/
         for filename in $(ls ../../src/prizmbasic/); do . ../2html.sh ../../src/prizmbasic/$filename > ./$filename.html; done
         cat MOT.FIX.prizmbasic.html
 
@@ -61,7 +56,7 @@ jobs:
 
     - name: Commit to deploy branch
       run: |
-        export GIT_COMMIT_MESSAGE=$(cat ~/GIT_COMMIT_MESSAGE)
+        export GIT_COMMIT_MESSAGE=$(git log -1 --pretty=%B)
         git config --global user.email "GitHub Actions"
         git config --global user.name "actions@github.com"
         git rm -r --cached .
