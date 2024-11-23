@@ -52,7 +52,7 @@ jobs:
         git add -f ./src/markdown/*.md
     - name: Merge deploy branch into main
       run: |
-        git merge --no-ff deploy -m "$GIT_COMMIT_MESSAGE"
+        git merge --no-ff deploy -m "$GIT_COMMIT_MESSAGE" --allow-unrelated-histories
     - name: Push changes to main branch
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
