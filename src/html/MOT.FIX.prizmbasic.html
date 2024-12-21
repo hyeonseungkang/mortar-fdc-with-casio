@@ -2,11 +2,11 @@
 # 수정<br>
 <span style="color:#0000c0;text-decoration:underline;">&quot;MOT.FIX&quot;</span><br>
 <br>
-# 사격방위각<br>
+# 최초 사격방위각<br>
 <span style="color:#0000c0;text-decoration:underline;">&quot;MTAZ&quot;</span>? -&gt; A<br>
 A/<span style="color:#0000c0;text-decoration:underline;">160</span>*<span style="color:#0000c0;text-decoration:underline;">9</span> -&gt; A<br>
 <br>
-# 수평거리<br>
+# 최초 수평거리<br>
 <span style="color:#0000c0;text-decoration:underline;">&quot;MTRN&quot;</span>? -&gt; B<br>
 B/<span style="color:#0000c0;text-decoration:underline;">10</span> -&gt; B<br>
 A+Bi -&gt; A<br>
@@ -15,25 +15,25 @@ A+Bi -&gt; A<br>
 <span style="color:#0000c0;text-decoration:underline;">&quot;OTAZ&quot;</span>? -&gt; B<br>
 B/<span style="color:#0000c0;text-decoration:underline;">160</span>*<span style="color:#0000c0;text-decoration:underline;">9</span> -&gt; B<br>
 <br>
-# 이전 수평수정량<br>
+# 이전에 적용한 편의수정량의 합계<br>
 <span style="color:#0000c0;text-decoration:underline;">&quot;DEF.PST.CORR&quot;</span>? -&gt; C<br>
 B+Ci -&gt; B<br>
 <br>
-# 이전 사거리수정량<br>
+# 이전에 적용한 사거리수정량의 합계<br>
 <span style="color:#0000c0;text-decoration:underline;">&quot;RN.PST.CORR&quot;</span>? -&gt; C<br>
 <br>
-# 현재 수평수정량<br>
+# 현재 편의수정량<br>
 <span style="color:#0000c0;text-decoration:underline;">&quot;DEF.PRE.CORR&quot;</span>? -&gt; D<br>
 C+Di -&gt; C<br>
 <br>
 # 현재 사거리수정량<br>
 <span style="color:#0000c0;text-decoration:underline;">&quot;RN.PRE.CORR&quot;</span>? -&gt; D<br>
 <br>
-# 최근 사격방위각<br>
+# 최신 산출 편각<br>
 <span style="color:#0000c0;text-decoration:underline;">&quot;LAST.DEF&quot;</span>? -&gt; E<br>
 D+Ei -&gt; D<br>
 <br>
-# 최근 사거리<br>
+# 최신 산출 사거리<br>
 <span style="color:#0000c0;text-decoration:underline;">&quot;LAST.RN&quot;</span>? -&gt; E<br>
 <br>
 <span style="color:#804000;text-decoration:underline;">Rec</span>(<span style="color:#804000;text-decoration:underline;">ImP</span>(A), <span style="color:#0000c0;text-decoration:underline;">90</span>-<span style="color:#804000;text-decoration:underline;">ReP</span>(A)+<span style="color:#804000;text-decoration:underline;">ReP</span>(B))<br>
@@ -46,11 +46,22 @@ I+Ji -&gt; G<br>
 # 설정 초기화<br>
 <span style="color:#008080;font-weight:bold;">Prog</span> <span style="color:#0000c0;text-decoration:underline;">&quot;ZCLNSETUP&quot;</span><br>
 <br>
+# DEF+<span style="color:#804000;text-decoration:underline;">n</span><span style="color:#0000c0;text-decoration:underline;">.0</span>의 의미<br>
+#   거리인수 계산 방식 이원화<br>
+#   수평거리 * (<span style="color:#0000c0;text-decoration:underline;">0.1</span>)^<span style="color:#804000;text-decoration:underline;">n</span><br>
+<br>
+# 산출 편각 DEF+<span style="color:#0000c0;text-decoration:underline;">0</span>. (거리인수 = 수평거리)<br>
 <span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">&quot;DEF+0.&quot;</span><br>
 <span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">8</span>, <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#804000;text-decoration:underline;">ImP</span>(D)-I<br>
+<br>
+# 산출 편각 DEF+<span style="color:#0000c0;text-decoration:underline;">2</span>. (거리인수 = 수평거리 * <span style="color:#0000c0;text-decoration:underline;">0.01</span>)<br>
 <span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">2</span>, <span style="color:#0000c0;text-decoration:underline;">&quot;DEF+2.&quot;</span><br>
 <span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">8</span>, <span style="color:#0000c0;text-decoration:underline;">2</span>, <span style="color:#804000;text-decoration:underline;">ImP</span>(D)-I/<span style="color:#804000;text-decoration:underline;">ImP</span>(A)*<span style="color:#0000c0;text-decoration:underline;">10</span><br>
+<br>
+# 산출 편각 DEF+<span style="color:#0000c0;text-decoration:underline;">3</span>. (거리인수 = 수평거리 * <span style="color:#0000c0;text-decoration:underline;">0.001</span>)<br>
 <span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">3</span>, <span style="color:#0000c0;text-decoration:underline;">&quot;DEF+3.&quot;</span><br>
 <span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">8</span>, <span style="color:#0000c0;text-decoration:underline;">3</span>, <span style="color:#804000;text-decoration:underline;">ImP</span>(D)-I/<span style="color:#804000;text-decoration:underline;">ImP</span>(A)*<span style="color:#0000c0;text-decoration:underline;">100</span><br>
+<br>
+# 산출 사거리<br>
 <span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">1</span>, <span style="color:#0000c0;text-decoration:underline;">4</span>, <span style="color:#0000c0;text-decoration:underline;">&quot;RN&quot;</span><br>
 <span style="color:#008080;font-weight:bold;">Locate</span> <span style="color:#0000c0;text-decoration:underline;">8</span>, <span style="color:#0000c0;text-decoration:underline;">4</span>, E+(J-<span style="color:#804000;text-decoration:underline;">ReP</span>(G))<br>
