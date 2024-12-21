@@ -1,11 +1,11 @@
 # 수정
 "MOT.FIX" 
 
-# 사격방위각
+# 최초 사격방위각
 "MTAZ"? -> A
 A/160*9 -> A
 
-# 수평거리
+# 최초 수평거리
 "MTRN"? -> B
 B/10 -> B
 A+Bi -> A
@@ -14,25 +14,25 @@ A+Bi -> A
 "OTAZ"? -> B
 B/160*9 -> B
 
-# 이전 수평수정량
+# 이전에 적용한 편의수정량의 합계
 "DEF.PST.CORR"? -> C
 B+Ci -> B
 
-# 이전 사거리수정량
+# 이전에 적용한 사거리수정량의 합계
 "RN.PST.CORR"? -> C
 
-# 현재 수평수정량
+# 현재 편의수정량
 "DEF.PRE.CORR"? -> D
 C+Di -> C
 
 # 현재 사거리수정량
 "RN.PRE.CORR"? -> D
 
-# 최근 사격방위각
+# 최신 산출 편각
 "LAST.DEF"? -> E
 D+Ei -> D
 
-# 최근 사거리
+# 최신 산출 사거리
 "LAST.RN"? -> E
 
 Rec(ImP(A), 90-ReP(A)+ReP(B))
@@ -45,11 +45,22 @@ Rec(I, J+90-ImP(G))
 # 설정 초기화
 Prog "ZCLNSETUP"
 
+# DEF+n.0의 의미
+#   거리인수 계산 방식 이원화
+#   수평거리 * (0.1)^n
+
+# 산출 편각 DEF+0. (거리인수 = 수평거리)
 Locate 1, 1, "DEF+0."
 Locate 8, 1, ImP(D)-I
+
+# 산출 편각 DEF+2. (거리인수 = 수평거리 * 0.01)
 Locate 1, 2, "DEF+2."
 Locate 8, 2, ImP(D)-I/ImP(A)*10
+
+# 산출 편각 DEF+3. (거리인수 = 수평거리 * 0.001)
 Locate 1, 3, "DEF+3."
 Locate 8, 3, ImP(D)-I/ImP(A)*100
+
+# 산출 사거리
 Locate 1, 4, "RN"
 Locate 8, 4, E+(J-ReP(G))
