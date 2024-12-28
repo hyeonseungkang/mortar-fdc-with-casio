@@ -2,7 +2,7 @@
 
 <img src="https://img.shields.io/badge/casio_basic-blue?style=for-the-badge&logo=visualbasic&logoColor=ffffff" />
 
-Calculate mortar firing chart with Casio scientific calculator
+Calculate mortar firing data with Casio scientific calculator
 
 [REAMDE.ko-KR.md](./README.ko-KR.md)
 
