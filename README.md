@@ -12,6 +12,11 @@ Calculate mortar firing data with Casio scientific calculator
     <img height="106" src="./assets/20231021_111008.jpg" />
 </p>
 
+## News
+
+- [New] Discharged sergeant Kang, released his prank *"Automation of Firing Data Calculation for 60mm Mortar"* written during his service to his Github.
+  - <a href="./Automation_of_Firing_Data_Calculation_for_60mm_Mortar.pdf"><img width="400" src="assets/Automation_of_Firing_Data_Calculation_for_60mm_Mortar.jpg" /></a>
+
 ## Requirements
 
 1. Casio scientific calculator including Program Mode (PROG) with CASIO BASIC 

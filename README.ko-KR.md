@@ -12,6 +12,11 @@
     <img height="106" src="./assets/20231021_111008.jpg" />
 </p>
 
+## News
+
+- [New] 만기전역한 병장 강현승, 당직 서는 동안 썼던 prank *" 60미리 박격포의 사격제원 산출 자동화 방안 "* 을 본인의 깃허브에 릴리즈하다.
+    - <a href="./Automation_of_Firing_Data_Calculation_for_60mm_Mortar.pdf"><img width="400" src="assets/Automation_of_Firing_Data_Calculation_for_60mm_Mortar.jpg" /></a>
+
 ## 요구사항
 
 1. CASIO BASIC와 프로그램 모드(PROG)를 지원하는 카시오 공학용 계산기
